@@ -10,10 +10,10 @@ The Licensing Portal for the FI Sales Team is a full-stack MERN application (Mon
 
 ## Installation
 
-* You can check out the live application [HERE]()
+* You can check out the live application [HERE](https://licensing-portal-frontend.netlify.app/)
   You can use your own login credentials, or try a demo one using:
-    + username:
-    + password:
+    + email:hugocheah@hbbc.com
+    + password:734hugo#B
 
 * You can also run it locally (requirement: have a local version of MongoDB running)
   +  Front end: Clone this repo -> run `npm install` -> run `npm run dev`
