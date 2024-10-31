@@ -6,6 +6,7 @@ import Specialist from './Specialist';
 import { ISpecialist } from '../interfaces/specialist'; 
 import { Link } from 'react-router-dom'; // Import Link for navigation
 import {baseUrl} from '../config'
+import './SpecialistList.css'
 
 const SpecialistList: React.FC = () => {
     const [specialists, setSpecialists] = useState<ISpecialist[]>([])
@@ -25,12 +26,12 @@ const SpecialistList: React.FC = () => {
 
     return (
         <>
-            <h1 className="title has-text-centered" style={{ margin: '40px' }}>HBBC Specialist List</h1>
+            <h1 className="title has-text-centered has-text-white" style={{ margin: '40px', marginTop:'150px' }}>HBBC Specialist List</h1>
             <div className="has-text-centered" style={{ marginBottom: '30px' }}>
                 <Link to="/search" className="button is-primary">Search Specialists</Link>
             </div>
-            <div style={{ backgroundColor: '#f5f5f5', padding: '20px', marginBottom: '100px' }}>
-                <div className="columns is-multiline box">
+            <div className="sl-list" style={{ backgroundColor: '#f5f5f5', padding: '20px' }}>
+                <div className="columns is-multiline box has-background-black">
                     {specialists.map((specialist) => (
                         <Specialist key={specialist._id} {...specialist} />
                     ))}

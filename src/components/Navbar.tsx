@@ -96,7 +96,7 @@ function Navbar({ user, setUser }: NavbarProps) {
                 </nav>
 
                 {/* Fixed Welcome Message Below Navbar */}
-                {user && showWelcome && ( 
+                {/* {user && showWelcome && ( 
                     <div
                         className="container is-flex"
                         style={{
@@ -107,13 +107,13 @@ function Navbar({ user, setUser }: NavbarProps) {
                             color: '#fff', // White text color
                             padding: '30px 0',
                             zIndex: 999, // Below the navbar but above the content
-                            justifyContent: 'flex-start',
+                            justifyContent: 'center',
                             paddingLeft: '40px',
                         }}
                     >
                         <p>{`🔆 Welcome ${user.username}`}</p>
                     </div>
-                )}
+                )} */}
             </header>
 
             {/* Add a margin-top to content below to avoid overlap */}

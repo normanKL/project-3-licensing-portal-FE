@@ -5,6 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { ISpecialist, IInsurance, ITakaful } from '../interfaces/specialist';
 import {baseUrl} from '../config'
+import './EditSpecialist.css'
 
 const EditSpecialist = () => {
     const { id } = useParams<{ id: string }>()
@@ -84,12 +85,14 @@ const EditSpecialist = () => {
     }
 
     return (
-        <div className="container" >
+        <div className="edit-specialist">
+        <div className="container">
             {specialist && (
                 <div className="card">
                     <div className="card-content" style={{ backgroundColor:'#1E1F1F' }}>
-                        <h1 className="title has-text-centered" style={{ marginTop: '10px', marginBottom: '25px' }}>
+                        <h1 className="title has-text-centered has-text-white" style={{ marginTop: '10px', marginBottom: '25px' }}>
                             Edit Licensing Status for {specialist.name}</h1>
+                        <br/>
 
                         {/* Life Insurance Section */}
                         <div className="box">
@@ -214,6 +217,7 @@ const EditSpecialist = () => {
                     </div>
                 </div>
             )}
+        </div>
         </div>
     )
 }

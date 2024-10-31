@@ -6,6 +6,7 @@ import Specialist from './Specialist';
 import { ISpecialist } from '../interfaces/specialist';
 import { useNavigate } from 'react-router-dom';
 import {baseUrl} from '../config'
+import './SearchSpecialist.css'
 
 const SearchSpecialist: React.FC = () => {
     const [name, setName] = useState('')
@@ -44,9 +45,9 @@ const SearchSpecialist: React.FC = () => {
 
     return (
         <div className="container">
-            <h1 className="title has-text-centered" style={{ margin: '30px' }}>Search Specialists</h1>
+            <h1 className="title has-text-centered has-text-white" style={{ margin: '30px' }}>Search Specialists</h1>
             <div className="field">
-                <label className="label">Name</label>
+                <label className="label has-text-white">Name</label>
                 <div className="control">
                     <input
                         className="input"
@@ -61,7 +62,7 @@ const SearchSpecialist: React.FC = () => {
             <div className="columns" style={{ marginTop: '5px' }}>
                 <div className="column is-one-quarter">
                     <div className="field">
-                        <label className="label">Region</label>
+                        <label className="label has-text-white">Region</label>
                         <div className="control">
                             <div className="select">
                                 <select
@@ -83,7 +84,7 @@ const SearchSpecialist: React.FC = () => {
 
                 <div className="column is-three-quarters">
                     <div className="field">
-                        <label className="label">Branch</label>
+                        <label className="label has-text-white">Branch</label>
                         <div className="control">
                             <input
                                 className="input"
@@ -99,14 +100,14 @@ const SearchSpecialist: React.FC = () => {
 
             <div className="buttons" style={{ marginBottom: '40px' }}>
                 <button className="button is-primary" onClick={handleSearch}>Search</button>
-                <button className="button is-light" onClick={handleBack}>Back</button>
+                <button className="button is-primary" onClick={handleBack}>Back</button>
             </div>
 
             {error && <p className="has-text-danger">{error}</p>}
 
             {results.length > 0 && (
-                <div style={{ backgroundColor: '#f5f5f5', padding: '20px', marginBottom: '100px' }}>
-                    <div className="columns is-multiline box">
+                <div>
+                    <div className="columns is-multiline box has-background-black" style={{marginTop:'20px'}}>
                         {results.map((specialist) => (
                             <Specialist key={specialist._id} {...specialist} />
                         ))}

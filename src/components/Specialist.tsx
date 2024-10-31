@@ -3,23 +3,24 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ISpecialist } from '../interfaces/specialist';
+import './Specialist.css'
 
 const Specialist: React.FC<ISpecialist> = ({ _id, name, image, designation, region, branch, email, user, insurance, takaful }) => {
     return (
-        <div className="column is-one-quarter-desktop is-one-third-tablet">
+        <div className="column is-one-quarter-desktop is-one-third-tablet has-background-black">
             <Link to={`/specialist/${_id}`} className="card"> {/* Wrap in Link */}
                 <div className="card-image">
                     <figure className="image is-1by1">
                         <img src={image} alt={name} style={{ objectFit: 'cover' }}/>
                     </figure>
                 </div>
-                <div className="card-content" style={{ padding: '10px' }}>
-                    <p style={{fontSize: '18px', fontWeight: 'bold', marginTop:'10px' }}>{name}</p>
-                    <p style={{fontSize: '16px', fontWeight: 'bold' }}>{designation}</p>
-                    <p style={{fontSize:'16px',fontWeight: 'bold'}}>{email}</p>
-                    <p style={{marginTop: '10px',fontSize:'16px',fontWeight: 'bold'}}>Region: {region}</p>
-                    <p style={{fontSize:'16px',fontWeight: 'bold'}}>Branch: {branch}</p>
-                    <p style={{marginTop: '5px',fontSize:'16px',fontWeight: 'bold'}}> Admin: {user.username}</p>
+                <div className="card-content has-background-black" style={{ padding: '10px' }}>
+                    <p className="has-text-white" style={{fontSize: '18px', fontWeight: 'bold', marginTop:'10px' }}>{name}</p>
+                    <p className="has-text-grey-lighter"  style={{fontSize: '16px', fontWeight: 'bold' }}>{designation}</p>
+                    <p className="has-text-grey-lighter" style={{fontSize:'16px',fontWeight: 'bold'}}>{email}</p>
+                    <p className="has-text-grey-lighter"  style={{marginTop: '10px',fontSize:'16px',fontWeight: 'bold'}}>Region: {region}</p>
+                    <p className="has-text-grey-lighter"  style={{fontSize:'16px',fontWeight: 'bold'}}>Branch: {branch}</p>
+                    <p className="has-text-grey-lighter"  style={{marginTop: '5px',fontSize:'16px',fontWeight: 'bold'}}> Admin: {user.username}</p>
 
                     {/* Life Insurance and Takaful Status */}
                     <div className="insurance-status" style={{ marginTop: '20px', marginBottom: '20px' }}>

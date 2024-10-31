@@ -43,37 +43,37 @@ function SpecialistDetail() {
                         </figure>
                     </div>
                     <div className="card-content">
-                        <div className="box" style={{ marginTop: '20px' }}>
-                            <h2 className="title" style={{fontSize: '30px', fontWeight: 'bold' }}>{specialist.name}</h2>
-                            <h2 className="subtitle" style={{fontSize: '25px'}}>{specialist.designation}</h2>
-                            <p style={{marginTop:'15px'}}><strong>Region:</strong> {specialist.region}</p>
-                            <p><strong>Branch:</strong> {specialist.branch}</p>
-                            {specialist.user && <p><strong>Admin:</strong> {specialist.user.username}</p>}
+                        <div className="box has-background-black" style={{ marginTop: '20px' }}>
+                            <h2 className="title has-text-white" style={{fontSize: '30px', fontWeight: 'bold' }}>{specialist.name}</h2>
+                            <h2 className="subtitle has-text-grey-lighter" style={{fontSize: '25px'}}>{specialist.designation}</h2>
+                            <p className='has-text-grey-lighter' style={{marginTop:'15px'}}><strong className='has-text-white'>Region:</strong> {specialist.region}</p>
+                            <p className='has-text-grey-lighter'><strong className='has-text-white'>Branch:</strong> {specialist.branch}</p>
+                            {specialist.user && <p className='has-text-grey-lighter'><strong className='has-text-white'>Admin:</strong> {specialist.user.username}</p>}
                         </div>
-                        <div className="box" style={{ marginTop: '20px' }}>
-                            <h4 className="title is-4" style={{fontSize: '30px', fontWeight: 'bold' }}>Life Insurance Details</h4>
+                        <div className="box has-background-black" style={{ marginTop: '20px' }}>
+                            <h4 className="title is-4 has-text-white" style={{fontSize: '30px', fontWeight: 'bold' }}>Life Insurance Details</h4>
                             {specialist.insurance ? (
                                 <div>
-                                    <p style={{marginTop:'15px'}}><strong>Completed:</strong> {specialist.insurance.completed}</p>
-                                    <p><strong>Pending:</strong> {specialist.insurance.pending}</p>
-                                    <p><strong>Licensing:</strong> {specialist.insurance.licensing}</p>
-                                    <p><strong>Status:</strong> {specialist.insurance.status}</p>
+                                    <p className='has-text-grey-lighter' style={{marginTop:'15px'}}><strong className='has-text-white'>Completed:</strong> {specialist.insurance.completed}</p>
+                                    <p className='has-text-grey-lighter'><strong className='has-text-white'>Pending:</strong> {specialist.insurance.pending}</p>
+                                    <p className='has-text-grey-lighter'><strong className='has-text-white'>Licensing:</strong> {specialist.insurance.licensing}</p>
+                                    <p className='has-text-grey-lighter'><strong className='has-text-white'>Status:</strong> {specialist.insurance.status}</p>
                                 </div>
                             ) : (
                                 <p>No Life Insurance details available.</p>
                             )}
                         </div>
-                        <div className="box" style={{ marginTop: '20px' }}>
-                            <h4 className="title is-4" style={{fontSize: '30px', fontWeight: 'bold' }}>Takaful Details</h4>
+                        <div className="box has-background-black" style={{ marginTop: '20px' }}>
+                            <h4 className="title is-4 has-text-white" style={{fontSize: '30px', fontWeight: 'bold' }}>Takaful Details</h4>
                             {specialist.takaful ? (
                                 <div>
-                                    <p style={{marginTop:'15px'}}><strong>Completed:</strong> {specialist.takaful.completed}</p>
-                                    <p><strong>Pending:</strong> {specialist.takaful.pending}</p>
-                                    <p><strong>Licensing:</strong> {specialist.takaful.licensing}</p>
-                                    <p><strong>Status:</strong> {specialist.takaful.status}</p>
+                                    <p className='has-text-grey-lighter' style={{ marginTop: '15px' }}><strong className='has-text-white'>Completed:</strong> {specialist.takaful.completed}</p>
+                                    <p className='has-text-grey-lighter'><strong className='has-text-white'>Pending:</strong >{specialist.takaful.pending}</p>
+                                    <p className='has-text-grey-lighter'><strong className='has-text-white'>Licensing:</strong> {specialist.takaful.licensing}</p>
+                                    <p className='has-text-grey-lighter'><strong className='has-text-white'>Status:</strong> {specialist.takaful.status}</p>
                                 </div>
                             ) : (
-                                <p>No Takaful details available.</p>
+                                    <p className='has-text-white'>No Takaful details available.</p>
                             )}
                         </div>
                     </div>

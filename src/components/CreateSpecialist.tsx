@@ -46,42 +46,42 @@ const CreateSpecialist: React.FC = () => {
 
     return (
         <div className="container" style={{ marginTop: '40px', marginBottom: '100px' }}>
-            <h2 className="title has-text-centered" style={{ marginBottom: '20px' }}>
+            <h2 className="title has-text-centered has-text-white" style={{ marginBottom: '40px', marginTop:'150px' }}>
                 Create New Specialist </h2>
             {error && <p className="error">{error}</p>}
-            <form onSubmit={handleFormSubmit} className="box">
+            <form onSubmit={handleFormSubmit} className="box has-background-black">
                 <div className="field" style={{ marginBottom: '20px' }}>
-                    <label className="label">Image URL</label>
+                    <label className="label has-text-white">Image URL</label>
                     <div className="control">
                         <input className="input" type="text" name="image" value={newSpecialist.image} onChange={handleInputChange} required />
                     </div>
                 </div>
                 <div className="field" style={{ marginBottom: '20px' }}>
-                    <label className="label">Name</label>
+                    <label className="label has-text-white">Name</label>
                     <div className="control">
                         <input className="input" type="text" name="name" value={newSpecialist.name} onChange={handleInputChange} required />
                     </div>
                 </div>
                 <div className="field" style={{ marginBottom: '20px' }}>
-                    <label className="label">Designation</label>
+                    <label className="label has-text-white">Designation</label>
                     <div className="control">
                         <input className="input" type="text" name="designation" value={newSpecialist.designation} onChange={handleInputChange} required />
                     </div>
                 </div>
                 <div className="field" style={{ marginBottom: '20px' }}>
-                    <label className="label">Email</label>
+                    <label className="label has-text-white">Email</label>
                     <div className="control">
                         <input className="input" type="text" name="email" value={newSpecialist.email} onChange={handleInputChange} required />
                     </div>
                 </div>
                 <div className="field" style={{ marginBottom: '20px' }}>
-                    <label className="label">Region</label>
+                    <label className="label has-text-white">Region</label>
                     <div className="control">
                         <input className="input" type="text" name="region" value={newSpecialist.region} onChange={handleInputChange} required />
                     </div>
                 </div>
                 <div className="field" style={{ marginBottom: '20px' }}>
-                    <label className="label">Branch</label>
+                    <label className="label has-text-white">Branch</label>
                     <div className="control">
                         <input className="input" type="text" name="branch" value={newSpecialist.branch} onChange={handleInputChange} required />
                     </div>
@@ -92,7 +92,7 @@ const CreateSpecialist: React.FC = () => {
                         <button type="submit" className="button is-link">Submit</button>
                     </div>
                     <div className="control">
-                        <button type="button" className="button is-light" onClick={() => navigate('/user')}>
+                        <button type="button" className="button is-primary" onClick={() => navigate('/user')}>
                             Cancel
                         </button>
                     </div>

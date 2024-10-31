@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { IUser } from "../interfaces/user";
 import {baseUrl} from '../config'
+import './Signup.css'
 
 interface SignupFormData extends IUser {
     password: string
@@ -59,15 +60,15 @@ function Signup() {
     }
 
     return (
-        <div className="section">
+        <div className="signup-section">
             <div className="container" style={{ paddingBottom: '80px' }}>
                 <form onSubmit={handleSubmit}>
-                    <h2 style={{ fontSize: '23px', fontWeight: 'bold' }}>Section A: Signup Details</h2>
+                    <h2 className="has-text-grey-lighter" style={{ fontSize: '23px', fontWeight: 'bold' }}>Section A: Signup Details</h2>
                     <br />
 
                     {/* Username Field */}
                     <div className="field">
-                        <label htmlFor="username" className="label">
+                        <label htmlFor="username" className="label has-text-white">
                             Username
                         </label>
                         <div className="control">
@@ -86,7 +87,7 @@ function Signup() {
 
                     {/* Email Field */}
                     <div className="field" style={{ marginTop: '25px', marginBottom: '15px' }}>
-                        <label htmlFor="email" className="label">
+                        <label htmlFor="email" className="label has-text-white">
                             Email
                         </label>
                         <div className="control">
@@ -105,7 +106,7 @@ function Signup() {
 
                     {/* Email Field */}
                     <div className="field" style={{ marginTop: '25px', marginBottom: '15px' }}>
-                        <label htmlFor="password" className="label">
+                        <label htmlFor="password" className="label has-text-white">
                             Password
                         </label>
                         <div className="control">
@@ -124,7 +125,7 @@ function Signup() {
 
                     {/* Password Confirmation Field */}
                     <div className="field" style={{ marginTop: '25px', marginBottom: '15px' }}>
-                        <label htmlFor="passwordConfirmation" className="label">
+                        <label htmlFor="passwordConfirmation" className="label has-text-white">
                             Password Confirmation
                         </label>
                         <div className="control">
@@ -144,12 +145,12 @@ function Signup() {
                     </div>
 
                     <br />
-                    <h2 style={{ fontSize: '23px', fontWeight: 'bold' }}> Section B: Profile Details</h2>
+                    <h2 className="has-text-grey-lighter" style={{ fontSize: '23px', fontWeight: 'bold' }}> Section B: Profile Details</h2>
                     <br />
 
                     {/* Image URL Field */}
                     <div className="field">
-                        <label htmlFor="image" className="label">Image URL</label>
+                        <label htmlFor="image" className="label has-text-white">Image URL</label>
                         <div className="control">
                             <input type="text" className="input" name="image" value={formData.image} onChange={handleChange} />
                             {errorData.image && <small className="has-text-danger">{errorData.image}</small>}
@@ -158,7 +159,7 @@ function Signup() {
 
                     {/* Designation Field */}
                     <div className="field" style={{ marginTop: '25px', marginBottom: '15px' }}>
-                        <label htmlFor="designation" className="label">Designation</label>
+                        <label htmlFor="designation" className="label has-text-white">Designation</label>
                         <div className="control">
                             <input type="text" className="input" name="designation" value={formData.designation} onChange={handleChange} />
                             {errorData.designation && <small className="has-text-danger">{errorData.designation}</small>}
@@ -169,7 +170,7 @@ function Signup() {
                         <div className="column">
                             {/* Region Field */}
                             <div className="field">
-                                <label htmlFor="region" className="label">Region</label>
+                                <label htmlFor="region" className="label has-text-white">Region</label>
                                 <div className="control">
                                     <div className="select is-fullwidth">
                                         <select name="region" value={formData.region} onChange={handleChange}>
@@ -190,7 +191,7 @@ function Signup() {
                         <div className="column">
                             {/* Branch Field */}
                             <div className="field">
-                                <label htmlFor="branch" className="label">Branch</label>
+                                <label htmlFor="branch" className="label has-text-white">Branch</label>
                                 <div className="control">
                                     <input
                                         type="text"
